@@ -22,7 +22,7 @@ const getUsuarios = async (req = request, res = response) => {
 const postUsuario = async (req = request, res = response) => {
 
     if (req.body.rol == "") {
-        req.body.rol = "CLIENT"
+        req.body.rol = "CLIENTE"
     }
 
     const { nombre, correo, password, rol } = req.body;
@@ -44,7 +44,7 @@ const postUsuario = async (req = request, res = response) => {
 
 const putUsuario = async (req = request, res = response) => {
     if (req.body.rol == "") {
-        req.body.rol = "CLIENT"
+        req.body.rol = "CLIENTE"
     }
 
     const {rol,nombre} = req.usuario
